@@ -1,0 +1,13 @@
+services:
+  react-builder:
+    container_name: react-component-builder
+    build: .
+    ports:
+      - "1001:1001"
+    volumes:
+      - ./deployments:/app/deployments
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
